@@ -8,8 +8,8 @@ p_font_size = 12
 
 open = Paragraph(text="Instructions for Decision Tool", width=p_width, style={"font-size": "{}pt".format(header_font_size)})
 
-p1 = Paragraph(text="This tool will help you determine which of your criteria is most important and which decision will "
-                    "best meet those criteria. There are 3 parts to this tool. First is the rubric, second is the "
+p1 = Paragraph(text="This tool will help you determine which of your criteria is most important and which decision "
+                    "will best meet those criteria. There are 3 parts to this tool. First is the rubric, second is the "
                     "features checklist, and third is the multicriteria decision making model (MCDM).", width=p_width,
                style={"font-size": "{}pt".format(p_font_size)})
 
@@ -35,9 +35,11 @@ p4 = Paragraph(text="The MCDM model helps you make your final decision regarding
 p5 = Paragraph(text="1) Choose the subset of criteria that are most important to you from the box. Click 'Submit "
                     "Criteria' when you have finished.", width=p_width, style={"font-size": "{}pt".format(p_font_size)})
 
-p6 = Paragraph(text="2) Rank each criteria you selected with a unique number. Lower numbers mean that the criteria "
+p6 = Paragraph(text="2) Rank each scenario generated with a unique number. Lower numbers mean that the scenario "
                     "is more important. Be sure to pay attention to the Swing Weighting Matrix on the bottom of the "
-                    "page. This will help you define each criteria if you hover over the boxes. Click 'Calculate "
+                    "page. This will help you define each scenarios if you hover over the boxes. You should rank each "
+                    "scenario such that the criteria that is ranked as best will have the best possible features for "
+                    "that criteria but in all other criteria you will get the worst possible outcome. Click 'Calculate "
                     "Ranks' when you have finished.", width=p_width, style={"font-size": "{}pt".format(p_font_size)})
 
 p7 = Paragraph(text="3) Use the sliders that appear to tell the tool how important that criterion is relative to "
