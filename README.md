@@ -1,5 +1,9 @@
 # Multicriteria Decision Making Model
 
+Created to help aid selection of Qualitative Data Analysis (QDA) software as part of a graduate student project at [Carnegie Mellon University](https://www.cmu.edu/)'s [Heinz College](https://www.heinz.cmu.edu/) by Matt Jannetti with teammates Beverly Bendix, Mengyu Chen, Elisha Desmangles, Emily Rosen & Xi Wang.
+
+=======
+
 ## Installation
 
 ### Requirements
