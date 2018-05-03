@@ -54,6 +54,9 @@ class MCDMModel:
         self.criteria_b = Button(label="Submit Criteria", button_type="primary")
         self.criteria_b.on_click(self.choose_criteria_callback)
 
+        self.clear_button = Button(label="Reset", button_type="warning")
+        self.clear_button.on_click(self.clear_model)
+
         self.rank_submit = Button(label="Calculate Ranks", button_type="primary")
         self.rank_submit.on_click(self.submit_ranks)
 
@@ -62,6 +65,14 @@ class MCDMModel:
         self.data_table = DataTable
 
         self.app_layout = layout()
+
+    def clear_model(self):
+
+        self.swing_table = swing_table.create_swing_table()
+
+        self.app_layout.children.pop(1)
+
+        self.app_layout.children.append(layout([[self.swing_table]]))
 
     def choose_criteria(self):
 
@@ -88,7 +99,8 @@ class MCDMModel:
 
             self.app_layout.children.append(layout([[self.swing_table],
                                                     *[self.ranking[k] for k in self.ranking.keys()],
-                                                    [self.rank_submit]]))
+                                                    [self.rank_submit],
+                                                    [self.clear_button]]))
 
     def rank_criteria(self):
 
@@ -133,7 +145,8 @@ class MCDMModel:
 
                 self.app_layout.children.append(layout([[self.swing_table],
                                                         *[self.ranking[k] for k in self.ranking.keys()],
-                                                        [self.rank_submit]]))
+                                                        [self.rank_submit],
+                                                       [self.clear_button]]))
 
             except IndexError:
 
@@ -157,7 +170,8 @@ class MCDMModel:
 
                 self.app_layout.children.append(layout([[self.swing_table],
                                                         *[self.ranking[k] for k in self.ranking.keys()],
-                                                       [self.rank_submit]]))
+                                                       [self.rank_submit],
+                                                    [self.clear_button]]))
 
             else:
 
@@ -187,7 +201,8 @@ class MCDMModel:
 
                 self.app_layout.children.append(layout([[self.swing_table],
                                                         *[self.ranking[k] for k in self.ranking.keys()],
-                                                        [self.rank_submit]]))
+                                                        [self.rank_submit],
+                                                    [self.clear_button]]))
 
             else:
 
@@ -265,6 +280,7 @@ class MCDMModel:
                       [self.weight_sliders[k] for k in self.weight_sliders.keys()])
         b_layout = [[t[0], t[1], t[2]] for t in buttons]
         b_layout.append([self.rank_submit, self.b])
+        b_layout.append(self.clear_button)
         b_layout.insert(0, [self.swing_table])
 
         self.app_layout.children.pop(1)
@@ -289,6 +305,7 @@ class MCDMModel:
 
         b_layout.append([self.rank_submit, self.b])
         b_layout.append(widgetbox(self.data_table))
+        b_layout.append([self.clear_button])
         self.app_layout.children.append(layout(b_layout))
 
 
