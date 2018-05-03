@@ -29,6 +29,8 @@ df = df[["Criteria", "Atlas.ti", "Dedoose", "MAXQDA", "NVivo", "Transana", "TOM"
 
 definitions = pd.read_excel("app/data/Rubric.xlsx", "Definitions")
 
+definitions["Definition"] = definitions["Definition"].str.replace("\n", " <br> ")
+
 definitions["Definition"].fillna("", inplace=True)
 
 df = df.melt(id_vars=["Criteria"], var_name="Tool", value_name="Score")
@@ -69,7 +71,11 @@ poor_source = ColumnDataSource(data=dict(criteria=df_poor["Criteria"].tolist(), 
                                          score=df_poor["Score"].tolist(), color=df_poor["color"].tolist(),
                                          cb_color=df_poor["cb_color"].tolist(), desc=df_poor["Definition"].tolist()))
 
-hover = HoverTool(tooltips=[("description", "@desc")])
+hover = HoverTool(tooltips="""
+    <p>
+    @desc{safe}
+    </p>
+    """)
 
 p = figure(y_range=y_range, x_range=x_range, plot_width=1900, plot_height=900, x_axis_location="above", tools=[hover, "save"])
 

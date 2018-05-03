@@ -30,7 +30,6 @@ def create_swing_table(filter_col=None):
 
     criteria = definitions["Criteria"].sort_values().drop_duplicates().tolist()
 
-
     for c in criteria:
 
         definitions.loc[definitions.Criteria == c, "scenario"] = "Scenario {}".format(criteria.index(c) + 1)
@@ -59,14 +58,6 @@ def create_swing_table(filter_col=None):
 
     df_ex_poor = df_ex_poor.merge(definitions[["Criteria", "Score", "Definition"]], left_on=["y", "Score"],
                                   right_on=["Criteria", "Score"], how="left")
-
-    df_ex_poor = df_ex_poor.merge(definitions[["Criteria", "Score", "Definition"]], left_on=["x", "Score"],
-                                  right_on=["Criteria", "Score"], how="left")
-
-    df_ex_poor.rename(columns={"Definition_x": "Definition_row",
-                               "Definition_y": "Definition_col"}, inplace=True)
-
-    df_ex_poor.drop(["Criteria_y", "Criteria_x"], axis=1, inplace=True)
 
     df_ex_poor = df_ex_poor.merge(definitions[["Criteria", "scenario"]].drop_duplicates(), left_on="y", right_on="Criteria", how="left")
 
@@ -104,17 +95,19 @@ def create_swing_table(filter_col=None):
                                                   y=df_ex["scenario"].tolist(),
                                                   score=df_ex["Score"].tolist(),
                                                   cb_color=df_ex["cb_color"].tolist(),
-                                                  definition_row=df_ex["Definition_row"].tolist(),
-                                                  definition_col=df_ex["Definition_col"].tolist()))
+                                                  definition=df_ex["Definition"].tolist()))
 
     poor_source = ColumnDataSource(data=dict(x=df_poor["x"].tolist(),
                                              y=df_poor["scenario"].tolist(),
                                              score=df_poor["Score"].tolist(),
                                              cb_color=df_poor["cb_color"].tolist(),
-                                             definition_row=df_poor["Definition_row"].tolist(),
-                                             definition_col=df_poor["Definition_col"].tolist()))
+                                             definition=df_poor["Definition"].tolist()))
 
-    hover = HoverTool(tooltips=[("Definition", "@definition_col")])
+    hover = HoverTool(tooltips="""
+    <p>
+    @definition{safe}
+    </p>
+    """)
 
     p = figure(y_range=y_range, x_range=x_range, plot_width=plot_wid, plot_height=plot_h, x_axis_location="above", tools=[hover, "save"])
 
