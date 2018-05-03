@@ -1,1 +1,1 @@
-bokeh serve --show DecisionTool/
+bokeh serve --show app/

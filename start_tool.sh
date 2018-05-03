@@ -1,2 +1,2 @@
-#!/usr/bin/bash
-bokeh serve --show DecisionTool/
+#!/bin/bash
+bokeh serve --show app/
