@@ -25,7 +25,7 @@ for cp in cb_palette:
 
 
 df = pd.read_excel("app/data/Rubric.xlsx", "Rubric v3")
-df = df[["Criteria", "Atlas.ti", "Dedoose", "MAXQDA", "NVivo", "Transana", "TOM", "QDA Miner"]]
+df = df.drop(["Category", "Grading Scale", "Definition"], axis=1)#df[["Criteria", "Atlas.ti", "Dedoose", "MAXQDA", "NVivo", "Transana", "TOM", "QDA Miner"]]
 
 definitions = pd.read_excel("app/data/Rubric.xlsx", "Definitions")
 

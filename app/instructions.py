@@ -53,6 +53,13 @@ p7 = Paragraph(text="3) Use the sliders that appear to tell the tool how importa
 p8 = Paragraph(text="4) A new table will appear with the tools ranks from best to worst with their final scores. "
                     "Use this to make your decision.", width=p_width, style={"font-size": "{}pt".format(p_font_size)})
 
+h4 = Paragraph(text="Briefs", width=p_width, style={"font-size": "{}pt".format(header_font_size)})
+
+p9 = Paragraph(text="Briefs contain short descriptions of the tool, detailed cost information, and screenshots of "
+                    "the tool.", width=p_width, style={"font-size": "{}pt".format(p_font_size)})
+
+
+
 app_layout = layout([open,
                      p1,
                      h1,
@@ -64,4 +71,6 @@ app_layout = layout([open,
                      p5,
                      p6,
                      p7,
-                     p8])
+                     p8,
+                     h4,
+                     p9])
