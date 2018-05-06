@@ -9,22 +9,23 @@ p_font_size = 12
 open = Paragraph(text="Instructions for Decision Tool", width=p_width, style={"font-size": "{}pt".format(header_font_size)})
 
 p1 = Paragraph(text="This tool will help you determine which of your criteria is most important and which decision "
-                    "will best meet those criteria. There are 3 parts to this tool. First is the rubric, second is the "
-                    "features checklist, and third is the multicriteria decision making model (MCDM).", width=p_width,
+                    "will best meet those criteria. There are 4 parts to this tool. First is the rubric, second is the "
+                    "features checklist, third is the multicriteria decision making model (MCDM), and fourth are short "
+                    "briefs on the tools analyzed.", width=p_width,
                style={"font-size": "{}pt".format(p_font_size)})
 
 h1 = Paragraph(text="Rubric", width=p_width, style={"font-size": "{}pt".format(header_font_size)})
 
 p2 = Paragraph(text="The rubric shows and defines the criteria used in your model. Each criteria is graded on a scale "
-                    "from excellent to poor. Hover over each box to show see the definition of each grade. This is "
-                    "intended to allow users to see the variation of each tools across your criteria and make "
+                    "from excellent to poor. Hover over each box to show the definition of each grade. This "
+                    "will allow users to see the variation of each tools across your criteria and make "
                     "comparisons across all tools easy.", width=p_width,
                style={"font-size": "{}pt".format(p_font_size)})
 
 h2 = Paragraph(text="Features Checklist", width=p_width, style={"font-size": "{}pt".format(header_font_size)})
 
 p3 = Paragraph(text="The features checklist shows a detailed list of the features for each tool you are comparing. "
-                    "Again, hover over the dots to see the feature definition.", width=p_width,
+                    "Again, hover over the dots to see the feature definitions.", width=p_width,
                style={"font-size": "{}pt".format(p_font_size)})
 
 h3 = Paragraph(text="Multi-Criteria Decision Making (MCDM) Model", width=p_width, style={"font-size": "{}pt".format(header_font_size)})
