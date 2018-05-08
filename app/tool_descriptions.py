@@ -37,8 +37,8 @@ class ToolDesc:
 
             if t == tool:
 
-                img_dir = os.path.join("app", "static/images", t)
-                txt_dir = os.path.join("app", "static/text", t)
+                img_dir = os.path.join("app/static/images", t)
+                txt_dir = os.path.join("app/static/text", t)
 
                 images = os.listdir(img_dir)
                 texts = os.listdir(txt_dir)
@@ -93,7 +93,6 @@ class ToolDesc:
                 div_layout.append(Div(text=txt, style={"font-size": "{}pt".format(font_size)}, width=500))
             else:
 
-                print(i[1])
                 div_layout.append(Div(text="<img src = '{}'>".format(i[1])))
 
         if len(self.app_layout.children) > 1:
@@ -104,3 +103,7 @@ class ToolDesc:
             # pass
 
         self.app_layout.children.append(layout(div_layout))
+
+if __name__ == '__main__':
+    td = ToolDesc()
+    td.get_images("MAXQDA")
