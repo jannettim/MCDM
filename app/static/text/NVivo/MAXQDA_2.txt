@@ -1,4 +1,0 @@
-<a href="https://www.maxqda.com/">Official Website</a>
-<br>
-<br>
-MAXQDA is a tool built for researchers worldwide. It makes use of qualitative and mixed methods analysis. With several features for coding, frequency analysis, transcription, and statistics. It is a multipurpose and flexible tool to analyze text and other unstructured data.

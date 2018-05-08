@@ -1,1 +1,0 @@
-Four main windows: Document System, Code System, Document Browser, and Code Retrieval

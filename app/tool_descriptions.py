@@ -44,7 +44,7 @@ class ToolDesc:
                 texts = os.listdir(txt_dir)
 
                 y = [int(re.search(r"_(\d+)\.(png|txt)$", i).group(1)) for i in images]
-                y += [int(re.search(r"_(\d+)\.(png|txt)$", i).group(1)) for i in texts]
+                y += [int(re.search(r"_(\d+)\.(png|txt)$", i).group(1)) for i in texts if i != ".gitignore"]
                 img_path = [os.path.join(img_dir, i) for i in images]
                 txt_path = [os.path.join(txt_dir, i) for i in texts]
 

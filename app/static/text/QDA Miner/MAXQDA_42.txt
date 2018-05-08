@@ -1,2 +1,0 @@
-Computes the distance between documents (lower is more similar).
-<br>

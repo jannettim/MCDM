@@ -1,1 +1,0 @@
-Can get word counts by and rank by several variables
