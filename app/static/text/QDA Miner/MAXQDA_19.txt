@@ -1,0 +1,1 @@
+Can select documents using simple and complex queries.

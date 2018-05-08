@@ -1,0 +1,1 @@
+Can do pie charts and other vertical bar charts. However, with long code names the charts can look busy.

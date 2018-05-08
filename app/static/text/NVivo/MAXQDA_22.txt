@@ -1,0 +1,2 @@
+Can do an extended or simple search for words with several options and get table of all documents containing those words.
+<br>
