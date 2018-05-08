@@ -1,6 +1,6 @@
 from bokeh.plotting import figure, show, curdoc
 from bokeh.layouts import widgetbox, layout, row, column
-from bokeh.models import Div, Dropdown
+from bokeh.models import Div, Dropdown, Paragraph
 
 import os
 import re
@@ -31,8 +31,6 @@ class ToolDesc:
 
     def get_images(self, tool):
 
-        print(self.app_layout.children)
-
         tool_images = []
 
         for t in self.tool_dir:
@@ -40,19 +38,63 @@ class ToolDesc:
             if t == tool:
 
                 img_dir = os.path.join("app", "static/images", t)
+                txt_dir = os.path.join("app", "static/text", t)
 
                 images = os.listdir(img_dir)
-                y = [int(re.search(r"_(\d+)\.png$", i).group(1)) for i in images]
-                img_path = [os.path.join(img_dir, i) for i in images]
-                tool = [t, ]*len(images)
+                texts = os.listdir(txt_dir)
 
-                tool_images.extend(list(zip(y, img_path)))
+                y = [int(re.search(r"_(\d+)\.(png|txt)$", i).group(1)) for i in images]
+                y += [int(re.search(r"_(\d+)\.(png|txt)$", i).group(1)) for i in texts]
+                img_path = [os.path.join(img_dir, i) for i in images]
+                txt_path = [os.path.join(txt_dir, i) for i in texts]
+
+                all_files = img_path + txt_path
+
+                tool_images.extend(list(zip(y, all_files)))
 
         div_layout = []
 
+        count = 0
+
+        #434343
+
         for i in sorted(tool_images):
 
-            div_layout.append(Div(text="<img src = '{}'>".format(i[1])))
+            file_type = re.search(r"\.(png|txt)$", i[1]).group(1)
+
+            if file_type == "txt":
+
+                try:
+                    head = re.search(r"_(h\d)_", i[1]).group(1)
+                except AttributeError:
+
+                    head = None
+
+                if head == "h1":
+
+                    font_size = 26
+
+                elif head == "h2":
+
+                    font_size = 20
+
+                elif head == "h3":
+
+                    font_size = 14
+
+                else:
+
+                    font_size = 11
+
+                with open(i[1], "r") as rf:
+
+                    txt = rf.read()
+
+                div_layout.append(Div(text=txt, style={"font-size": "{}pt".format(font_size)}, width=500))
+            else:
+
+                print(i[1])
+                div_layout.append(Div(text="<img src = '{}'>".format(i[1])))
 
         if len(self.app_layout.children) > 1:
             self.app_layout.children.pop(1)
