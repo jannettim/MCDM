@@ -1,1 +1,0 @@
-Extracts all coded segments from activated codes and documents

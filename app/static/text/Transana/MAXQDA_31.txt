@@ -1,1 +1,0 @@
-View coded segments in documents. Can see where codes occur in documents. This is an alternative to the above visualization.
