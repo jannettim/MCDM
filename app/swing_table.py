@@ -56,7 +56,7 @@ def create_swing_table(filter_col=None):
     df_ex_poor['x'] = pd.Categorical(df_ex_poor['x'], df_ex_poor["x"].drop_duplicates().tolist())
     df_ex_poor['y'] = pd.Categorical(df_ex_poor['y'], df_ex_poor["y"].drop_duplicates().tolist())
 
-    df_ex_poor = df_ex_poor.merge(definitions[["Criteria", "Score", "Definition"]], left_on=["y", "Score"],
+    df_ex_poor = df_ex_poor.merge(definitions[["Criteria", "Score", "Definition"]], left_on=["x", "Score"],
                                   right_on=["Criteria", "Score"], how="left")
 
     df_ex_poor = df_ex_poor.merge(definitions[["Criteria", "scenario"]].drop_duplicates(), left_on="y", right_on="Criteria", how="left")
