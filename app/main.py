@@ -19,7 +19,7 @@ features = features_checklist.p
 instr = instructions.app_layout
 desc = tool_descriptions.ToolDesc().app_layout
 
-instr_tab = Panel(child=instr, title="Introdcution")
+instr_tab = Panel(child=instr, title="Introduction")
 tab3 = Panel(child=rubric, title="Rubric")
 tab2 = Panel(child=features, title="Features Checklist")
 tab4 = Panel(child=mcdm, title="MCDM")
