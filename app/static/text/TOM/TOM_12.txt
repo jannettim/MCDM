@@ -1,0 +1,8 @@
+Shows top 10 weighted words in each topic. These represent the most important co-occurrences. This can be generated in two ways with a small change in the python code.
+<br>
+<br>
+Possible algorithms:<br>
+<blockquote>
+1. Latent Dirichlet Analysis<br>
+2. Non-negative Matrix Factorization
+</blockquote>

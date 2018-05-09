@@ -1,0 +1,4 @@
+<a href="http://mediamining.univ-lyon2.fr/people/guille/tom.php">Official Website</a>
+<br>
+TOM is a free and open-source tool developed by Dr. Adrien Guille of the University of Lyon. Instead of focusing on coding and more traditional forms of qualitative analysis it provides more automated solutions. TOM finds words that are associated with each other and collects them into topics. TOM allows the user to browse documents and extracts insights.
+<br>

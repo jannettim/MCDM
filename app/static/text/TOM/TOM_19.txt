@@ -1,0 +1,1 @@
+By default will graph topic by date to allow analysts to track topics over multiple events.
