@@ -1,0 +1,1 @@
+You can build different user groups and set individual and group permissions.

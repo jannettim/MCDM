@@ -1,0 +1,1 @@
+Within Dedoose, you can create memos to record insights, and this will be useful  for merging documents with different codesets and  validation.

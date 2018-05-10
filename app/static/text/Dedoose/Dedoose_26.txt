@@ -1,0 +1,1 @@
+With feature you can add a weight value to each code when creating them. Then you can use the code x weight matrix to show the distribution or value system of codes. This is a way to customize/create your own analysis function.

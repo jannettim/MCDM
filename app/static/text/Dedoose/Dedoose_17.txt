@@ -1,0 +1,2 @@
+"A descriptor set is a collection of information that describes the source of your data (e.g., research participants, families, schools, other settings, etc.) at a particular level of analysis"<sup>1</sup>
+These descriptors can be created in a spreadsheet and imported into Dedoose.

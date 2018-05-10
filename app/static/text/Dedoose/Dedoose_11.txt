@@ -1,0 +1,1 @@
+Dedoose highlights coded text with various colors, and the table at the bottom right corner shows the hierarchy of codes. By expanding it you can easily search, edit or create subcodes.

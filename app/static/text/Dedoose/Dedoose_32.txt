@@ -1,0 +1,1 @@
+A feature called "Training Center" is embedded in your tool dashboard, and designed to assist your team develop and maintain inter-rater reliability. You can set up tests to evaluate the logic your team members applied to documents. Results of these tests will show statistical measures of reliability and consistency that is valuable for supporting team training and consistency.

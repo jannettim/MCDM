@@ -1,0 +1,3 @@
+<a href="http://www.dedoose.com/">Official Website</a>
+<br>
+Dedoose is a monthly-subscription based web app for researchers to analyze qualitative data, such as text, photos, audio, videos, and spreadsheets. It enables users to conduct mixed methods and conduct research efficiently and simultaneously.

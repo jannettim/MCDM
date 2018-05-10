@@ -1,0 +1,1 @@
+This feature allows users to generate a matrix shows that how many times two codes show up together. The cross point with higher value indicates that these two code may have a close relationship with each other.
