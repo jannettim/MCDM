@@ -1,0 +1,1 @@
+This is a useful for you to visualize the relationship among codes, such as quantity and sequence. You can know which code is the most significant and whether it is a subcode or supercode of others.

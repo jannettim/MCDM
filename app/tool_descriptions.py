@@ -56,8 +56,6 @@ class ToolDesc:
 
         count = 0
 
-        #434343
-
         for i in sorted(tool_images):
 
             file_type = re.search(r"\.(png|txt)$", i[1]).group(1)
@@ -106,4 +104,4 @@ class ToolDesc:
 
 if __name__ == '__main__':
     td = ToolDesc()
-    td.get_images("MAXQDA")
+    td.get_images("NVivo")

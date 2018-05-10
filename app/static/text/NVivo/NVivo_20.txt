@@ -1,0 +1,1 @@
+You can draw a map in the software to visualize relationships among various project items . Connecting raw data files, codes, cases, and users who created them together. 

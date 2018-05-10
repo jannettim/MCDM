@@ -122,6 +122,8 @@ def create_swing_table(filter_col=None):
 
     p.xaxis.major_label_orientation = .85
 
+    p.min_border = 75
+
     p.add_layout(legend, 'right')
 
     return p

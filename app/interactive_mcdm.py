@@ -1,7 +1,7 @@
 import pandas as pd
 from bokeh.plotting import figure, show, curdoc
 from bokeh.layouts import widgetbox, layout, row, column
-from bokeh.models import ColumnDataSource, Button, Slider, Dropdown, PreText, DataTable, TableColumn, MultiSelect, NumberFormatter, CustomJS
+from bokeh.models import ColumnDataSource, Button, Slider, Dropdown, PreText, DataTable, TableColumn, MultiSelect, NumberFormatter, Spacer
 from collections import OrderedDict, Counter
 import numpy as np
 
@@ -97,7 +97,7 @@ class MCDMModel:
 
                 pass
 
-            self.app_layout.children.append(layout([[self.swing_table],
+            self.app_layout.children.append(layout([[Spacer(width=300), self.swing_table],
                                                     *[self.ranking[k] for k in self.ranking.keys()],
                                                     [self.rank_submit],
                                                     [self.clear_button]]))
@@ -143,7 +143,7 @@ class MCDMModel:
 
                 self.app_layout.children.pop(1)
 
-                self.app_layout.children.append(layout([[self.swing_table],
+                self.app_layout.children.append(layout([[Spacer(width=300), self.swing_table],
                                                         *[self.ranking[k] for k in self.ranking.keys()],
                                                         [self.rank_submit],
                                                        [self.clear_button]]))
@@ -168,7 +168,7 @@ class MCDMModel:
 
                 self.app_layout.children.pop(1)
 
-                self.app_layout.children.append(layout([[self.swing_table],
+                self.app_layout.children.append(layout([[Spacer(width=300), self.swing_table],
                                                         *[self.ranking[k] for k in self.ranking.keys()],
                                                        [self.rank_submit],
                                                     [self.clear_button]]))
@@ -199,7 +199,7 @@ class MCDMModel:
 
                 self.app_layout.children.pop(1)
 
-                self.app_layout.children.append(layout([[self.swing_table],
+                self.app_layout.children.append(layout([[Spacer(width=300), self.swing_table],
                                                         *[self.ranking[k] for k in self.ranking.keys()],
                                                         [self.rank_submit],
                                                     [self.clear_button]]))
@@ -281,7 +281,7 @@ class MCDMModel:
         b_layout = [[t[0], t[1], t[2]] for t in buttons]
         b_layout.append([self.rank_submit, self.b])
         b_layout.append(self.clear_button)
-        b_layout.insert(0, [self.swing_table])
+        b_layout.insert(0, [Spacer(width=300), self.swing_table])
 
         self.app_layout.children.pop(1)
 
@@ -306,6 +306,7 @@ class MCDMModel:
         b_layout.append([self.rank_submit, self.b])
         b_layout.append(widgetbox(self.data_table))
         b_layout.append([self.clear_button])
+        b_layout.insert(0, [Spacer(width=300), self.swing_table])
         self.app_layout.children.append(layout(b_layout))
 
 

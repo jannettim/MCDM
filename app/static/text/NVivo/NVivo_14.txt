@@ -1,0 +1,1 @@
+This feature allows you to identify common/frequent words from sources. Those identified themes can be directly created into nodes.

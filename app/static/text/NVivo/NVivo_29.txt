@@ -1,0 +1,1 @@
+You can set up different user groups with different permissions. For example, if  you are a member of the “Project Owners” group you can view and modify the project.
