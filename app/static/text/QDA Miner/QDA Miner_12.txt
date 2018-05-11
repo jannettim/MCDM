@@ -1,0 +1,1 @@
+Colors can be used to differentiate codes. Other than coding text, QDA Miner also allows you to code images. This could be useful FEMA if they collect deployment and allocation maps or other graphics via passive data collection method.

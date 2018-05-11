@@ -1,0 +1,2 @@
+Code frequency will allow you to easily understand the frequency of keywords, which is useful when you want to find common observations mentioned by different stakeholders.
+Bar charts may be plotted vertically or horizontally 

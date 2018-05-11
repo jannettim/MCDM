@@ -1,0 +1,1 @@
+Bar charts may be used to represent the frequency of codes across values of a numerical or categorical variables.

@@ -1,0 +1,1 @@
+This feature allows multi-targets search, where you can choose multiple keywords within one search. It is valuable when you need to validate or track the original sources of an observation.
