@@ -88,7 +88,7 @@ class ToolDesc:
 
                     txt = rf.read()
 
-                div_layout.append(Div(text=txt, style={"font-size": "{}pt".format(font_size)}, width=500))
+                div_layout.append(Div(text=txt, style={"font-size": "{}pt".format(font_size)}, width=1000))
             else:
 
                 div_layout.append(Div(text="<img src = '{}'>".format(i[1])))
