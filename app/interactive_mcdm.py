@@ -21,6 +21,7 @@ class MCDMModel:
     def __init__(self):
 
         self.rubric = pd.read_excel(os.path.join(file_path, "data/Rubric.xlsx"), "Rubric v3")
+        self.cost_model = pd.read_excel(os.path.join(file_path, "data/Rubric.xlsx"), "Cost_Model")
 
         try:
 
@@ -248,6 +249,12 @@ class MCDMModel:
         weights_df = pd.DataFrame(normed_weights, columns=["Criteria", "Normed_Weights"])
 
         rubric_calc = self.rubric_values.merge(weights_df, on=["Criteria"])
+
+        rubric_calc = rubric_calc.merge(self.cost_model[["Tool", "Normalized Cost"]], on="Tool", how="left")
+
+        rubric_calc.loc[rubric_calc.Criteria == "Cost", "Score"] = rubric_calc["Normalized Cost"]
+
+        rubric_calc.drop("Normalized Cost", axis=1)
 
         rubric_calc["WeightedScore"] = rubric_calc["Score"] * rubric_calc["Normed_Weights"]
 
