@@ -101,7 +101,3 @@ class ToolDesc:
             # pass
 
         self.app_layout.children.append(layout(div_layout))
-
-if __name__ == '__main__':
-    td = ToolDesc()
-    td.get_images("NVivo")

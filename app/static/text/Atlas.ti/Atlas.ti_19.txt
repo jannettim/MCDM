@@ -1,0 +1,1 @@
+Interface broken into 3 panes: a coded document, the code manager, and an analytical memo
